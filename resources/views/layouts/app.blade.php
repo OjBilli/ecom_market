@@ -84,7 +84,7 @@
                <div class="offcanvas__category pb-40">
                   <button class="tp-offcanvas-category-toggle">
                      <i class="fa-solid fa-bars"></i>
-                     All Categories
+                     Market Categories
                   </button>
                   <div class="tp-category-mobile-menu">
 
@@ -108,36 +108,7 @@
                   <a href="contact.html" class="tp-btn-2 tp-btn-border-2">Contact Us</a>
                </div>
             </div>
-            <div class="offcanvas__bottom">
-               <div class="offcanvas__footer d-flex align-items-center justify-content-between">
-                  <div class="offcanvas__currency-wrapper currency">
-                     <span class="offcanvas__currency-selected-currency tp-currency-toggle" id="tp-offcanvas-currency-toggle">Currency : USD</span>
-                     <ul class="offcanvas__currency-list tp-currency-list">
-                        <li>USD</li>
-                        <li>ERU</li>
-                        <li>BDT </li>
-                        <li>INR</li>
-                     </ul>
-                  </div>
-                  <div class="offcanvas__select language">
-                     <div class="offcanvas__lang d-flex align-items-center justify-content-md-end">
-                        <div class="offcanvas__lang-img mr-15">
-                           <img src="/home/img/icon/language-flag.png" alt="">
-                        </div>
-                        <div class="offcanvas__lang-wrapper">
-                           <span class="offcanvas__lang-selected-lang tp-lang-toggle" id="tp-offcanvas-lang-toggle">English</span>
-                           <ul class="offcanvas__lang-list tp-lang-list">
-                              <li>Spanish</li>
-                              <li>Portugese</li>
-                              <li>American</li>
-                              <li>Canada</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+           </div>
       </div>
       <div class="body-overlay"></div>
       <!-- offcanvas area end -->
@@ -312,37 +283,7 @@
                      <div class="col-md-6">
                         <div class="tp-header-top-right tp-header-top-black d-flex align-items-center justify-content-end">
                            <div class="tp-header-top-menu d-flex align-items-center justify-content-end">
-                              <div class="tp-header-top-menu-item tp-header-lang">
-                                 <span class="tp-header-lang-toggle" id="tp-header-lang-toggle">English</span>
-                                 <ul>
-                                    <li>
-                                       <a href="#">Spanish</a>
-                                    </li>
-                                    <li>
-                                       <a href="#">Russian</a>
-                                    </li>
-                                    <li>
-                                       <a href="#">Portuguese</a>
-                                    </li>
-                                 </ul>
-                              </div>
-                              <div class="tp-header-top-menu-item tp-header-currency">
-                                 <span class="tp-header-currency-toggle" id="tp-header-currency-toggle">USD</span>
-                                 <ul>
-                                    <li>
-                                       <a href="#">EUR</a>
-                                    </li>
-                                    <li>
-                                       <a href="#">CHF</a>
-                                    </li>
-                                    <li>
-                                       <a href="#">GBP</a>
-                                    </li>
-                                    <li>
-                                       <a href="#">KWD</a>
-                                    </li>
-                                 </ul>
-                              </div>
+
                               <div class="tp-header-top-menu-item tp-header-setting">
                                  <span class="tp-header-setting-toggle" id="tp-header-setting-toggle">Setting</span>
                                  <ul>
@@ -357,6 +298,7 @@
                                     </li>
                                     <li>
                                        <a href="login.html">Logout</a>
+
                                     </li>
                                  </ul>
                               </div>
@@ -577,16 +519,7 @@
                                        </ul>
                                     </li>
                                     <li><a href="coupon.html">Coupons</a></li>
-                                    <li class="has-dropdown">
-                                       <a href="blog.html">Blog</a>
-                                       <ul class="tp-submenu">
-                                          <li><a href="blog.html">Blog Standard</a></li>
-                                          <li><a href="blog-grid.html">Blog Grid</a></li>
-                                          <li><a href="blog-list.html">Blog List</a></li>
-                                          <li><a href="blog-details-2.html">Blog Details Full Width</a></li>
-                                          <li><a href="blog-details.html">Blog Details</a></li>
-                                       </ul>
-                                    </li>
+
                                     <li><a href="contact.html">Contact</a></li>
                                  </ul>
                               </nav>
@@ -843,7 +776,7 @@
 
       <main>
 
-  
+
      @yield('content')
       </main>
 
@@ -869,6 +802,9 @@
       <script src="/home/js/imagesloaded-pkgd.js"></script>
       <script src="/home/js/ajax-form.js"></script>
       <script src="/home/js/main.js"></script>
+      <script>
+
+      </script>
    </body>
 
 <!-- Mirrored from weblearnbd.net/tphtml/shofy-prv/shofy/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 May 2023 09:16:36 GMT -->

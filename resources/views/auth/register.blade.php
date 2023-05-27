@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Register')
 
 @section('content')
 
@@ -24,14 +25,18 @@
                       <p>Already have an account?  <span><a href="login.html">Sign In</a></span></p>
                    </div>
                    <div class="tp-login-option">
-                      
+                    <form action="{{route('register')}} " method="POST" >
+                        @csrf
                       <div class="tp-login-mail text-center mb-40">
                          <p>or Sign up with <a href="#">Email</a></p>
                       </div>
+                            @foreach ($errors->all() as $error)
+                        <p class="text-danger">{{ $error }}</p>
+                        @endforeach
                       <div class="tp-login-input-wrapper">
                          <div class="tp-login-input-box">
                             <div class="tp-login-input">
-                               <input id="name" type="text" placeholder="Shahnewaz Sakil">
+                               <input name="name" type="text" placeholder="Full name">
                             </div>
                             <div class="tp-login-input-title">
                                <label for="name">Your Name</label>
@@ -39,7 +44,7 @@
                          </div>
                          <div class="tp-login-input-box">
                             <div class="tp-login-input">
-                               <input id="email" type="email" placeholder="shofy@mail.com">
+                               <input name="email" type="email" placeholder="Email Address">
                             </div>
                             <div class="tp-login-input-title">
                                <label for="email">Your Email</label>
@@ -47,7 +52,16 @@
                          </div>
                          <div class="tp-login-input-box">
                             <div class="tp-login-input">
-                               <input id="tp_password" type="password" placeholder="Min. 6 character">
+                               <input  name="phone" type="number" placeholder="Phone Number">
+                            </div>
+                            <div class="tp-login-input-title">
+                               <label for="phone">Phone Number</label>
+                            </div>
+                         </div>
+
+                         <div class="tp-login-input-box">
+                            <div class="tp-login-input">
+                               <input name="password" type="password" minlength="8" placeholder="Password" required>
                             </div>
                             <div class="tp-login-input-eye" id="password-show-toggle">
                                <span id="open-eye" class="open-eye">
@@ -71,6 +85,16 @@
                                <label for="tp_password">Password</label>
                             </div>
                          </div>
+
+                         <div class="tp-login-input-box">
+                            <div class="tp-login-input">
+                               <input name="password_confirmation" type="password"
+                               placeholder="Confirm Password" required>
+                            </div>
+                            <div class="tp-login-input-title">
+                               <label for="password"> Confirm Password</label>
+                            </div>
+                         </div>
                       </div>
                       <div class="tp-login-suggetions d-sm-flex align-items-center justify-content-between mb-20">
                          <div class="tp-login-remeber">
@@ -78,16 +102,17 @@
                             <label for="remeber">I accept the terms of the Service & <a href="#">Privacy Policy</a>.</label>
                          </div>
                       </div>
-                      <div class="tp-login-bottom">
-                         <a href="#" class="tp-login-btn w-100">Sign Up</a>
-                      </div>
+
+                        <button class="tp-login-btn w-100" type="submit">Sign Up Now</button>
+
+                      </form>
                    </div>
                 </div>
              </div>
           </div>
        </div>
     </section>
-    <!-- login area end -->
+
 
  </main>
 @endsection

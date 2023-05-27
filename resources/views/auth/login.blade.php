@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Login')
 
 @section('content')
 
@@ -21,14 +22,18 @@
                        <p>Don’t have an account? <span><a href="{{route ('register')}}">Create a free account</a></span></p>
                     </div>
                     <div class="tp-login-option">
+                        @foreach ($errors->all() as $error)
+                        <p class="text-danger">{{ $error }}</p>
+                        @endforeach
 
                        <div class="tp-login-mail text-center mb-40">
                           <p>or Sign in with <a href="#">Email</a></p>
                        </div>
+                       <form method="POST" action="{{route('login')}}">
                        <div class="tp-login-input-wrapper">
                           <div class="tp-login-input-box">
                              <div class="tp-login-input">
-                                <input id="email" type="email" placeholder="shofy@mail.com">
+                                <input name="email" type="text" placeholder="Enter Email" required>
                              </div>
                              <div class="tp-login-input-title">
                                 <label for="email">Your Email</label>
@@ -36,7 +41,7 @@
                           </div>
                           <div class="tp-login-input-box">
                              <div class="tp-login-input">
-                                <input id="tp_password" type="password" placeholder="Min. 6 character">
+                                <input name="password" type="password" placeholder="Enter Password" >
                              </div>
                              <div class="tp-login-input-eye" id="password-show-toggle">
                                 <span id="open-eye" class="open-eye">
@@ -67,12 +72,13 @@
                              <label for="remeber">Remember me</label>
                           </div>
                           <div class="tp-login-forgot">
-                             <a href="forgot.html">Forgot Password?</a>
+                             <a href="{{route('password.request')}}">Forgot Password?</a>
                           </div>
                        </div>
-                       <div class="tp-login-bottom">
-                          <a href="profile.html" class="tp-login-btn w-100">Login</a>
-                       </div>
+                       <button class="tp-login-btn w-100" type="submit">Sign In Now</button>
+
+
+                    </form>
                     </div>
                  </div>
               </div>
