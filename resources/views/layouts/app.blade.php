@@ -105,8 +105,9 @@
                   </div>
                </div>
                <div class="offcanvas__btn">
-                  <a href="contact.html" class="tp-btn-2 bg-primary tp-btn-border-2">Log Out</a>
-               </div>
+                  <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById();" class="tp-btn-2 bg-primary tp-btn-border-2">{{__('Logout')}}</a>
+                    <form id="logout-form" action="{{route ('logout')}}" method="POST">@csrf</form>
+                </div>
             </div>
            </div>
       </div>
@@ -297,8 +298,10 @@
                                        <a href="cart.html">Cart</a>
                                     </li>
                                     <li>
-                                       <a href="login.html">Logout</a>
-
+                                        <a href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                                            class="item channel_item"><i
+                                            class="uil uil-lock-alt icon__1"></i>Logout</a>
+                                    <form action="{{route('logout')}} " id="logout-form" method="post">@csrf</form>
                                     </li>
                                  </ul>
                               </div>
@@ -333,7 +336,7 @@
                                        <a href="shop.html">Billing Information</a>
 
                                    </li>
-                                   
+
                                     <li><a href="coupon.html">Coupons</a></li>
 
                                     <li><a href="contact.html">Change Password</a></li>
